@@ -1,0 +1,46 @@
+<div class="row mb-2">
+  <div class="col-md-8">
+    <mat-form-field appearance="outline" class="custom-mat-input">
+      <mat-label>Search</mat-label>
+      <input (keyup)="searchHeroe($event)" matInput placeholder="Search by name or power">
+    </mat-form-field>
+  </div>
+  <div class="col-md-4" style="text-align: right;">
+    <button (click)="createHeroe()" color="primary" mat-raised-button>
+      <mat-icon>add</mat-icon>
+      Add
+    </button>
+  </div>
+</div>
+<div class="mat-elevation-z8">
+  <table [dataSource]="dataSource" mat-table>
+
+    <ng-container matColumnDef="name">
+      <th *matHeaderCellDef mat-header-cell> Name</th>
+      <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="power">
+      <th *matHeaderCellDef mat-header-cell> Power</th>
+      <td *matCellDef="let element" mat-cell> {{element.power}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef mat-header-cell style="width: 20%"> Action</th>
+      <td *matCellDef="let element" class="action-link" mat-cell>
+        <button (click)="editHeroe(element)" aria-label="update" class="custom-button-right-margin" color="accent"
+                mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button (click)="deleteHeroe(element)" aria-label="delete" color="warn" mat-icon-button>
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+</div>

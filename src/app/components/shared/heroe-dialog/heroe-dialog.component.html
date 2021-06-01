@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>{{title}}</h2>
+
+<mat-dialog-content [formGroup]="form">
+
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="outline" class="custom-mat-input">
+        <mat-label>Name</mat-label>
+        <input formControlName="name" matInput placeholder="Enter heroe name">
+        <mat-error *ngIf="isControlHasError('name','required')">
+          <strong>Required field</strong>
+        </mat-error>
+        <mat-error *ngIf="isControlHasError('name','minlength')">
+          <strong> The minimum number of characters allowed is: {{ CONSTANTS.MIN_TEXT_LENGTH }}</strong>
+        </mat-error>
+        <mat-error *ngIf="isControlHasError('name','maxlength')">
+          <strong>The maximum number of characters allowed is: {{ CONSTANTS.MAX_TEXT_LENGTH }}</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="outline" class="custom-mat-input">
+        <mat-label>Power</mat-label>
+        <input formControlName="power" matInput placeholder="Enter heroe power">
+        <mat-error *ngIf="isControlHasError('power','required')">
+          <strong>Required field</strong>
+        </mat-error>
+        <mat-error *ngIf="isControlHasError('name','minlength')">
+          <strong> The minimum number of characters allowed is: {{ CONSTANTS.MIN_TEXT_LENGTH }}</strong>
+        </mat-error>
+        <mat-error *ngIf="isControlHasError('name','maxlength')">
+          <strong>The maximum number of characters allowed is: {{ CONSTANTS.MAX_TEXT_LENGTH }}</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button (click)="close()" class="custom-button-right-margin" mat-raised-button>Cancel</button>
+  <button (click)="save()" color="primary" mat-raised-button>Save</button>
+</mat-dialog-actions>

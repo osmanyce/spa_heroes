@@ -1,0 +1,89 @@
+{
+  "heroes": [
+    {
+      "name": "Heroe 1",
+      "power": "Supernatural Condition",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Heroe 2",
+      "power": "Supernatural Condition"
+    },
+    {
+      "id": 3,
+      "name": "Heroe 3",
+      "power": "Supernatural Dexterity"
+    },
+    {
+      "name": "Heroe 5jjj",
+      "power": "Supernatural Strength",
+      "id": 5
+    },
+    {
+      "id": 8,
+      "name": "Heroe 8",
+      "power": "Supernatural Stamina"
+    },
+    {
+      "id": 9,
+      "name": "Heroe 9",
+      "power": "Supernatural Stamina"
+    },
+    {
+      "id": 10,
+      "name": "Heroe 10",
+      "power": "Supernatural Condition"
+    },
+    {
+      "id": 11,
+      "name": "Heroe 11",
+      "power": "Supernatural Reflexes"
+    },
+    {
+      "id": 12,
+      "name": "Heroe 12",
+      "power": "Supernatural Leap"
+    },
+    {
+      "id": 13,
+      "name": "Heroe 13",
+      "power": "Supernatural Condition"
+    },
+    {
+      "id": 14,
+      "name": "Heroe 14",
+      "power": "Supernatural Leap"
+    },
+    {
+      "id": 15,
+      "name": "Heroe 15",
+      "power": "Supernatural Combat"
+    },
+    {
+      "id": 16,
+      "name": "Heroe 16",
+      "power": "Supernatural Strength"
+    },
+    {
+      "id": 17,
+      "name": "Heroe 17",
+      "power": "Supernatural Reflexes"
+    },
+    {
+      "id": 18,
+      "name": "Heroe 18",
+      "power": "Supernatural Combat"
+    },
+    {
+      "id": 19,
+      "name": "Heroe 19",
+      "power": "Supernatural Reflexes"
+    },
+    {
+      "name": "oioioioio",
+      "power": "ooioioi",
+      "id": 1622528637476
+    }
+  ]
+}
