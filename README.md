@@ -14,7 +14,9 @@ Run `npm run generate` and `npm run server`.
 
 ## Deployment server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In another terminal run the command `ng serve` for a dev server. 
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 

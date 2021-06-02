@@ -18,7 +18,7 @@ export class InterceptorService implements HttpInterceptor {
     return next.handle(request).pipe(
       map<HttpEvent<any>, any>((evt: HttpEvent<any>) => {
         if (evt instanceof HttpResponse) {
-          this.loaderService.setLoadingState(false, request.url);
+          this.stopLoading(request.url);
         }
         return evt;
       })).pipe(catchError((error: HttpErrorResponse) => {
@@ -35,8 +35,17 @@ export class InterceptorService implements HttpInterceptor {
             console.error('Error from error interceptor', error);
             break;
         }
+        this.stopLoading(request.url);
         return throwError(error);
       }),
     );
+  }
+
+  /**
+   * Stop loading after a while
+   * @param url: string
+   */
+  private stopLoading(url: string): void {
+    setTimeout(() => this.loaderService.setLoadingState(false, url), 1000);
   }
 }

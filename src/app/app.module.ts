@@ -6,7 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ComponentsModule} from './components/components.module';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {InterceptorService} from './services/interceptor.service';
-import {MatProgressBarModule, MatProgressSpinnerModule} from '@angular/material';
+import {MatProgressBarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import {MatProgressBarModule, MatProgressSpinnerModule} from '@angular/material'
     HttpClientModule,
     BrowserAnimationsModule,
     ComponentsModule,
-    MatProgressSpinnerModule,
     MatProgressBarModule
   ],
   providers: [

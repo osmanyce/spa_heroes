@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Heroe} from '../models/heroe';
 import {HttpClient} from '@angular/common/http';
-import {API_URLS} from './api-urls';
+import {API_URLS} from '../utils/api-urls';
 import {map} from 'rxjs/operators';
 
 @Injectable({
@@ -13,6 +13,11 @@ export class HeroesService {
   constructor(private http: HttpClient) {
   }
 
+  /**
+   * Consult all the superheroes that contain, in their name or power, the value of a parameter sent in the request.
+   *
+   * @param parameter: string
+   */
   listHeroes(parameter: string = null): Observable<Heroe[]> {
     if (!parameter || '' === parameter.trim()) {
       return this.http.get<Heroe[]>(API_URLS.HEROES);
